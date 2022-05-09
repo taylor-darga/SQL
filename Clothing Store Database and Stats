@@ -1,0 +1,20 @@
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, quantity INTEGER, aisle INTEGER);
+INSERT INTO inventory VALUES (1, "tennis shoes", 25, 50, 2);
+INSERT INTO inventory VALUES (2, "shirts", 15, 100, 4);
+INSERT INTO inventory VALUES (3, "shorts", 10, 75, 5);
+INSERT INTO inventory VALUES (4, "pants", 15, 75, 5);
+INSERT INTO inventory VALUES (5, "socks", 5, 100, 1);
+INSERT INTO inventory VALUES (6, "sandals", 25, 25, 1);
+INSERT INTO inventory VALUES (7, "crew necks", 30, 25, 6);
+INSERT INTO inventory VALUES (8, "swimwear", 25, 25, 7);
+INSERT INTO inventory VALUES (9, "hoodies", 35, 25, 6);
+INSERT INTO inventory VALUES (10, "dresses", 20, 15, 7);
+INSERT INTO inventory VALUES (11, "flipflops", 15, 15, 1);
+INSERT INTO inventory VALUES (12, "hats", 10, 10, 7);
+INSERT INTO inventory VALUES (13, "bathrobes", 30, 5, 6);
+INSERT INTO inventory VALUES (14, "leggings", 15, 75, 5);
+INSERT INTO inventory VALUES (15, "belts", 15, 50, 5);
+
+SELECT * FROM inventory;
+SELECT item, price FROM inventory ORDER BY price;
+SELECT aisle, SUM(quantity) FROM inventory GROUP BY aisle
